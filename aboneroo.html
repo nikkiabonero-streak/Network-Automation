@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automation Results Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <h1>Automation Dashboard</h1>
+                <p>Welcome to your automation management system.</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                System Ready
+            </div>
+        </header>
+
+
+        <!-- DASHBOARD CARDS -->
+        <div class="dashboard">
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Automation</h3>
+                <p>Run your automation tasks easily.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Results</h3>
+                <p>View your latest automation output.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3>System Status</h3>
+                <p>Monitor your application.</p>
+            </div>
+
+        </div>
+
+
+        <!-- AUTOMATION FORM -->
+        <section class="section">
+
+            <h2>Run Automation</h2>
+
+            <p class="description">
+                Enter a task below to start your automation process.
+            </p>
+
+            <form action="/" method="POST">
+
+                <label for="task">Automation Task</label>
+
+                <input
+                    type="text"
+                    id="task"
+                    name="task"
+                    placeholder="Enter your task here..."
+                    required
+                >
+
+                <button type="submit">
+                    ⚡ Run Automation
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESULTS SECTION -->
+        <section class="section results-section">
+
+            <div class="results-header">
+                <h2>Automation Results</h2>
+                <span class="result-label">OUTPUT</span>
+            </div>
+
+            {% if results %}
+
+                <div class="results">
+                    <h3>✓ Automation Completed</h3>
+                    <pre>{{ results }}</pre>
+                </div>
+
+            {% elif error %}
+
+                <div class="error">
+                    <h3>⚠ Something went wrong</h3>
+                    <p>{{ error }}</p>
+                </div>
+
+            {% else %}
+
+                <div class="empty">
+                    <div class="empty-icon">📂</div>
+
+                    <h3>No Results Available Yet</h3>
+
+                    <p>
+                        Your automation results will appear here
+                        after you run your first task.
+                    </p>
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Automation Dashboard © 2026</p>
+            <p>Powered by Python and Flask</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1020;
+    color: #e8edff;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border: 1px solid #29365e;
+    background: #8c169159;
+    border-radius: 15px;
+    margin-bottom: 45px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-icon {
+    font-size: 35px;
+    color: #a78bfa;
+}
+
+.logo h1 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.logo h1 span {
+    color: #a78bfa;
+}
+
+.logo p {
+    color: #8290b5;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.system-status {
+    font-size: 11px;
+    color: #8ef0c0;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #36e5a0;
+    border-radius: 50%;
+    margin-right: 7px;
+    box-shadow: 0 0 10px #36e5a0;
+}
+
+/* WELCOME */
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.small-title {
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.welcome h2 span {
+    color: #a78bfa;
+}
+
+.welcome p:last-child {
+    color: #929fbd;
+    font-size: 14px;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #151f3b;
+    border: 1px solid #29365e;
+    padding: 23px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #a78bfa;
+}
+
+.stat-icon {
+    font-size: 28px;
+}
+
+.stat-card p {
+    font-size: 10px;
+    color: #8795b8;
+    margin-bottom: 7px;
+    letter-spacing: 1px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+}
+
+/* PANELS */
+
+.panel {
+    background: #131c35;
+    border: 1px solid #29365e;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.panel-heading h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.panel-heading p {
+    font-size: 12px;
+    color: #8795b8;
+}
+
+.badge {
+    background: #29234c;
+    color: #c4b5fd;
+    border: 1px solid #7054b8;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 10px;
+}
+
+/* INPUT */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    background: #0b1429;
+    border: 1px solid #34436a;
+    border-radius: 8px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 10px #a78bfa33;
+}
+
+.input-group input::placeholder {
+    color: #687696;
+}
+
+/* RUN BUTTON */
+
+.run-button {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #7654e8, #a78bfa);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.run-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #8b5cf655;
+}
+
+/* TERMINAL */
+
+.console-label {
+    color: #9c8bcf;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.terminal {
+    border: 1px solid #414d78;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #080e1b;
+}
+
+.terminal-header {
+    background: #1b2746;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #34436a;
+}
+
+.terminal-command {
+    color: #a78bfa;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 7px;
+}
+
+.terminal-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #a78bfa;
+}
+
+.terminal-dots span:nth-child(1) {
+    background: #fb7185;
+}
+
+.terminal-dots span:nth-child(2) {
+    background: #facc15;
+}
+
+.terminal-dots span:nth-child(3) {
+    background: #34d399;
+}
+
+.terminal-body {
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 25px;
+    color: #b9c8ed;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.terminal-body pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: inherit;
+}
+
+.success-label {
+    color: #4adea4;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.empty-icon {
+    font-size: 42px;
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    font-size: 17px;
+    color: #e8edff;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #8290b5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ERROR */
+
+.error {
+    color: #fda4af;
+}
+
+.error h3 {
+    margin-bottom: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: #657392;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 20px 5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .main-container {
+        width: 94%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h2 {
+        font-size: 27px;
+    }
+
+    .header {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .panel-heading {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        gap: 10px;
+        flex-direction: column;
+    }
+}
